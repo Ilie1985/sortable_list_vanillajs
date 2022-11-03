@@ -103,3 +103,19 @@ function checkOrder() {
     }
   });
 }
+
+function addEventListeners() {
+  const draggables = document.querySelectorAll('.draggable');
+  const dragListItems = document.querySelectorAll('.draggable-list li');
+
+  draggables.forEach(draggable => {
+    draggable.addEventListener('dragstart', dragStart);
+  });
+
+  dragListItems.forEach(item => {
+    item.addEventListener('dragover', dragOver);
+    item.addEventListener('drop', dragDrop);
+    item.addEventListener('dragenter', dragEnter);
+    item.addEventListener('dragleave', dragLeave);
+  });
+}
