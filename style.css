@@ -79,3 +79,7 @@ body {
   padding: 10px 20px;
   cursor: pointer;
 }
+
+.check-btn:active {
+  transform: scale(0.98);
+}
