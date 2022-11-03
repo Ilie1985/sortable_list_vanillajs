@@ -71,3 +71,12 @@ function dragOver(e) {
   // console.log('Event: ', 'dragover');
   e.preventDefault();
 }
+
+
+function dragDrop() {
+  // console.log('Event: ', 'drop');
+  const dragEndIndex = +this.getAttribute('data-index');
+  swapItems(dragStartIndex, dragEndIndex);
+
+  this.classList.remove('over');
+}
