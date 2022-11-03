@@ -48,3 +48,8 @@ function createList() {
 
   addEventListeners();
 }
+
+function dragStart() {
+  // console.log('Event: ', 'dragstart');
+  dragStartIndex = +this.closest('li').getAttribute('data-index');
+}
